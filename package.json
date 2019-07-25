@@ -1,0 +1,16 @@
+{
+  "name": "lambda-sync-private-elb-ips",
+  "version": "0.0.1",
+  "description": "Function to update private elb record in Route 53",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo \"Nothing special in deploy step\"",
+    "createzip": "npm run deploy && zip -r -X '../updateprivateELBrecord.zip' *"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.498.0"
+  }
+}
