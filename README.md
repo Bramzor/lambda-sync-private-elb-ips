@@ -23,9 +23,9 @@ To use this plugin:
 ## IAM Setting
 
 Besides the normal Lambda policy to write to CloudWatch logs, you also need the following policy:
-(Replace __ACCOUNTID__ with your accountid, __ZONEID__ with the route53 zone and __FUNCTIONNAME__ with the name of the lambda function)
+(Replace _ACCOUNTID_ with your accountid, _ZONEID_ with the route53 zone and _FUNCTIONNAME_ with the name of the lambda function)
 
----
+```
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -44,10 +44,10 @@ Besides the normal Lambda policy to write to CloudWatch logs, you also need the 
                 "events:ListTargetsByRule"
             ],
             "Resource": [
-                "arn:aws:events:*:__ACCOUNTID__:rule/__FUNCTIONNAME__",
-                "arn:aws:route53:::hostedzone/__ZONEID__"
+                "arn:aws:events:*:_ACCOUNTID_:rule/_FUNCTIONNAME_",
+                "arn:aws:route53:::hostedzone/_ZONEID_"
             ]
         }
     ]
 }
----
+```
